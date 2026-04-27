@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Issues Tracker</title>
+    <link rel="shortcut icon" href="./assets/github-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="flex justify-center items-center h-[100vh]">
+        <div class="shadow-lg">
+            <fieldset class="fieldset bg-base-200 border-base-300 rounded-[8px] w-xs border p-8 flex flex-col justify-center items-center gap-6">
+                <div class="flex flex-col justify-center items-center gap-1">
+                    <img class="mb-5" src="./assets/github-logo.png">
+                    <h1 class="text-lg font-semibold">Github Issues Tracker</h1>
+                    <p class="text-4 text-[#64748B]">Sign in to manage your issues</p>
+                </div>
+                <div class="flex flex-col gap-4 w-[100%]">
+                    <div class="flex flex-col gap-1">
+                        <label class="label text-4 text-[#1F2937] font-medium mb-1">Username</label>
+                        <input id="usr" type="text" class="input" placeholder="Enter Username" />
+                        <p class="mt-[2px] text-[#4A00FF] text-[14px]">Default: admin</p>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="label text-4 text-[#1F2937] font-medium mb-1">Password</label>
+                        <input id="pass" type="password" class="input" placeholder="Enter Password" />
+                        <p class="mt-[2px] text-[#4A00FF] text-sm">Default: admin123</p>
+                    </div>
+                    <!-- <p class="text-red-500 text-5 text-center hidden" id="wrong">Username & Password Wrong!</p> -->
+                </div>
+                <button onclick="submit()" class="btn bg-[#4A00FF] rounded-[8px] text-white w-[100%] font-semibold text-[16px]">Sign In</button>
+                <div class="flex justify-center items-center">
+                    <div class="bg-gray-500 border-t-1 border-gray-300 h-[1px] w-20"></div>
+                    <div><p class="flex items-center text-gray-500 before:content-[''] before:flex-1 before:border-t before:border-gray-300 before:mr-3 after:content-[''] after:flex-1 after:border-t after:border-gray-300 after:ml-3">OR</p></div>
+                    <div class="bg-gray-500 border-t-1 border-gray-300 h-[1px] w-20"></div>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <div class="flex justify-center items-center text-center"><p class="text-[#64748B] text-[14px] mt-0 mr-auto mb-[8px] ml-auto">Demo Credentials:</p></div>
+                    <div class="">
+                        <p class="text-4 font-mixed"><b>Username:</b> admin</p>
+                        <p class="text-4 font-mixed"><b>Password:</b> admin123</p>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </section>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>

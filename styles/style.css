@@ -1,0 +1,26 @@
+* {
+    font-family: "Geist", sans-serif;
+}
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+.queryWrong {
+    border: 1px solid red;
+    outline: 0;
+}
+.button-size {
+    width: 120px;
+    height: 40px;
+}
+.button-active {
+    background: #4A00FF;
+    color: white;
+}
+.button-unactive {
+    background: white;
+    border-color: #E4E4E7;
+    color: #64748B;
+}
