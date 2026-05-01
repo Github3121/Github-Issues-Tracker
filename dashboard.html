@@ -22,7 +22,7 @@
             </div>
             <div class="flex md:flex-row flex-col-reverse md:justify-center justify-end items-center gap-4 md:mr-20">
                 <div class="flex justify-center items-center text-center border-1 border-[#E4E4E7] rounded-[4px] py-[7px] px-4 gap-1">
-                    <i class="fa-brands fa-sistrix" style="font-size: 16px; color: #64748B;"></i><input type="text" placeholder="Search issues..." class="outline-0 border-0 text-[#64748B] placeholder:text-[#64748B]" />
+                    <i class="fa-brands fa-sistrix" style="font-size: 16px; color: #64748B;"></i><input id="searchInput" type="text" placeholder="Search issues..." class="outline-0 border-0 text-[#64748B] placeholder:text-[#64748B]" />
                 </div>
                 <button class="btn bg-[#4A00FF] text-white"><i class="fa-solid fa-plus"></i> New Issue</button>
             </div>
@@ -30,10 +30,7 @@
     </header>
     <!-- Hero Section -->
     <section class="flex justify-start items-center w-3/4 mx-auto mt-[60px] p-6 shadow-sm rounded-[8px]">
-        <div class="flex gap-2 flex-wrap md:justify-start items-center justify-center">
-            <button onclick="loadAllData()" class="btn btn-outline btn-primary button-size sm:w-[auto] button-active">All</button>
-            <button class="btn btn-outline btn-primary button-size button-unactive">Open</button>
-            <button class="btn btn-outline btn-primary button-size sm:w-[auto] button-unactive">Closed</button>
+        <div id="buttonUpdate" class="flex gap-2 flex-wrap md:justify-start items-center justify-center">
         </div>
     </section>
     <!-- status / Guide -->
@@ -41,8 +38,8 @@
         <div class="flex justify-between items-center w-[100%]">
             <div class="flex md:flex-row flex-col justify-start items-center gap-2">
                 <div class="w-[50px] h-[50px] bg-[#ECE4FF] p-[9px] rounded-[50px]"><img src="./assets/Aperture.png" alt=""></div>
-                <div class="flex flex-col justify-start items-center relative">
-                    <h1 class="text-start text-5 font-semibold"><span id="countIssus"></span> Issues</h1>
+                <div class="flex flex-col justify-center items-start">
+                    <h1 class="text-start text-5 font-semibold"><span id="countIssus">00</span> Issues</h1>
                     <p class="text-4 text-[#64748B]">Track and manage your project issues</p>
                 </div>
             </div>
@@ -52,10 +49,19 @@
         </div>
     </section>
     <section style="border-radius: 0 0 8px 8px; border-top: 1px solid #E4E4E7;" class="flex justify-between items-center w-3/4 mx-auto p-6 shadow-sm bg-[#FBFBFB]">
-        <div id="display" class="grid grid-cols-3 gap-3">
-            
+        <div id="display" class="grid md:grid-cols-4 grid-cols-1 gap-3">
         </div>
     </section>
-    <script src="./scripts/script.js"></script>
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+    <div class="modal-box">
+        <div id="displayModal"></div>
+        <div class="modal-action">
+        <form method="dialog">
+            <button class="btn button-active">Close</button>
+        </form>
+        </div>
+    </div>
+    </dialog>
+    <script src="./scripts/dashboard-script.js"></script>
 </body>
 </html>

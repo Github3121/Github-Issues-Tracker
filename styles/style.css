@@ -24,3 +24,19 @@
     border-color: #E4E4E7;
     color: #64748B;
 }
+.openBtn {
+    background: #00A96E;
+    color: white;
+    font-size: 12px;
+    font-weight: medium;
+    border-radius: 30px;
+    padding: 6px 8px;
+}
+.closedBtn {
+    background: #A855F7;
+    color: white;
+    font-size: 12px;
+    font-weight: medium;
+    border-radius: 30px;
+    padding: 6px 8px;
+}
