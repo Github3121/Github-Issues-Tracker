@@ -37,6 +37,7 @@ const dataLoad = (Buttons, data) => {
         activeBtn.classList.add("button-active");
         document.getElementById("countIssus").innerHTML = "";
         document.getElementById("countIssus").innerHTML = `${data.length}`;
+        document.getElementById("searchInput").value = "";
         displayData(data)
     } else if (Buttons === "Open") {
         removeactive();
@@ -45,6 +46,7 @@ const dataLoad = (Buttons, data) => {
         const openIssues = data.filter((Issue) => Issue.status === "open");
         document.getElementById("countIssus").innerHTML = "";
         document.getElementById("countIssus").innerHTML = `${openIssues.length}`;
+        document.getElementById("searchInput").value = "";
         displayData(openIssues);
     } else if (Buttons === "Closed") {
         removeactive();
@@ -53,6 +55,7 @@ const dataLoad = (Buttons, data) => {
         const closedIssues = data.filter((Issue) => Issue.status === "closed");
         document.getElementById("countIssus").innerHTML = "";
         document.getElementById("countIssus").innerHTML = `${closedIssues.length}`;
+        document.getElementById("searchInput").value = "";
         displayData(closedIssues);
     }
 }
